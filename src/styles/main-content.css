@@ -2,7 +2,7 @@
 .main-container {
     max-width: 80vw; /* View Width */
     height: 100vh; /* View Height */
-    margin-left: 320px;
+    margin-left: 315px;
     margin-right: 56px;
 }
 
@@ -13,7 +13,8 @@
     padding: 16px;
     margin: 10px;
     border-radius: 8px;
-    background-color: #121212;
+    background-color: #101010;
+    padding: 12px;
 }
 
 .header__navigation .navigation {
@@ -26,7 +27,8 @@
     margin-right: 1.25rem;
 }
 
-.arrow-left, .arrow-right {
+.arrow-left,
+.arrow-right {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -45,18 +47,18 @@
     align-items: center;
 }
 
-.header_search {
+.header__search {
     display: flex;
     align-items: center;
     width: 364px;
     height: 48px;
     margin-left: 8px;
     background-color: #242424;
-    border-radius: 500%;
+    border-radius: 500px;
     border: 1px solid transparent;
 }
 
-.header_search img {
+.header__search img {
     width: 16px;
     height: 16px;
     margin-left: 10px;
@@ -74,18 +76,20 @@
 }
 
 .header__login .subscribe {
+    border: none;
     color: #a7a7a7;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
     background-color: transparent;
     margin-right: 32px;
 }
 
 .header__login .login {
+    border: none;
     width: 100px;
     height: 48px;
     color: #000;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 700;
     border-radius: 40px;
 }
