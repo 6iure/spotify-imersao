@@ -1,27 +1,14 @@
-// Referencias aos elementos HTML
-
+// Referências aos elementos HTML
 const searchInput = document.getElementById('search-input');
 const resultArtist = document.getElementById('result-artist');
 const resultPlaylist = document.getElementById('result-playlists');
 
-// Função para fazer solicitacao a api quando se pesquisa algo na aplicação
-
+// Função para fazer solicitação a api quando se pesquisa algo na aplicação
 function requestApi(searchTerm) {
-
-    const search = searchTerm; // Your search term
-
-    fetch('http://localhost:3000/artists')
+    const url = `http://localhost:3000/artists?name_like=${searchTerm}`
+    fetch(url)
         .then((response) => response.json())
-        .then(users => {
-        
-            // Filter users whose names contain the search term
-            const matchedUsers = users.filter(user =>
-              user.name.toLowerCase().includes(search.toLowerCase())
-            );
-        
-            console.log(matchedUsers);
-          })
-        // .then((result) => displayResults(result))
+        .then((result) => displayResults(result))
 }
 
 // Função para mostrar o nome e imagem dos artistas quando são buscados
@@ -38,6 +25,7 @@ function displayResults(result) {
     resultArtist.classList.remove('hidden');
 }
 
+// Quando escrever algo na barra de pesquisa e nao for vazio, vai buscar pelos artistas na api 
 document.addEventListener('input', function() {
     const searchTerm = searchInput.value.toLowerCase(); 
         if (searchTerm === '') {
