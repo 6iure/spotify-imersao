@@ -239,7 +239,7 @@ h2.session {
 
 .artist-card {
   background: #181818;
-  border-radius: 8px;
+  border-radius: 12px;
   -ms-flex: 1;
   flex: 1;
   isolation: isolate;
@@ -247,6 +247,7 @@ h2.session {
   position: relative;
   transition: background-color 0.3s ease;
   width: 100%;
+  max-width: fit-content;
 }
 
 .artist-card:hover {
@@ -275,7 +276,7 @@ h2.session {
   color: #fff;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: pre-line;
   min-height: 62px;
 }
 
